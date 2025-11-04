@@ -1,0 +1,87 @@
+# Spark Plug MVP – Cursor Local Setup Instructions
+
+### 🧠 Project Type
+This is a **Next.js + TailwindCSS React project**. It’s designed to run perfectly in Cursor or VS Code.
+
+---
+
+### ⚙️ Step-by-step Setup (Cursor)
+
+1. **Create a new folder** in Cursor and copy all project files here (including `package.json`, `app/`, and `components/`).
+
+2. **Open integrated terminal** in Cursor (bottom panel or right-click → “Open in Terminal”).
+
+3. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+4. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and visit:
+   ```
+   http://localhost:3000
+   ```
+
+---
+
+### 🧩 Project Structure Overview
+```
+spark-plug-app/
+├── app/
+│   ├── layout.tsx          # Root layout
+│   ├── page.tsx            # Your full Spark Plug MVP app
+│   └── globals.css         # Tailwind base styles
+│
+├── components/ui/          # Lightweight UI component library
+│   ├── button.tsx
+│   ├── card.tsx
+│   ├── input.tsx
+│   ├── slider.tsx
+│   ├── badge.tsx
+│   ├── tabs.tsx
+│   └── progress.tsx
+│
+├── package.json            # Dependencies and scripts
+├── tailwind.config.ts      # Tailwind setup
+├── postcss.config.mjs      # PostCSS setup
+├── tsconfig.json           # TypeScript config
+└── next.config.mjs         # Next.js config
+```
+
+---
+
+### 🧠 Developing in Cursor
+Cursor automatically detects Next.js and TypeScript — you can:
+- Use **Command + P** to search files quickly.
+- Use **Command + Enter** on any component to ask the AI to refactor it.
+- Modify the main app logic in `app/page.tsx`.
+- Run hot reload (`npm run dev`) to see instant changes.
+
+---
+
+### 🧱 Common Commands
+| Command | Description |
+|----------|-------------|
+| `npm run dev` | Run local dev server (http://localhost:3000) |
+| `npm run build` | Build production bundle |
+| `npm start` | Run production build |
+
+---
+
+### 💡 Tips
+- If you see import errors like `@/components`, ensure **`baseUrl`** and **`paths`** are in `tsconfig.json`.
+- For Tailwind IntelliSense in Cursor, ensure you have the Tailwind plugin enabled.
+- If you change component files, the app auto-reloads.
+
+---
+
+### ✅ Next Steps
+- Customize `app/page.tsx` to split modules into folders (PriorityPanel, FocusPanel, RewardPanel).
+- Connect a backend or Supabase later for syncing progress.
+- Enhance Tetris graphics or add sound in `/reward/tetris/` in future versions.
+
+Enjoy building 🚀

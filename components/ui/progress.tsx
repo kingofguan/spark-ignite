@@ -1,0 +1,1 @@
+import React from "react"; export function Progress({value=0,className=""}:{value?:number;className?:string;}){ return (<div className={`w-full h-2 bg-neutral-800 rounded ${className}`}><div className="h-2 bg-neutral-200 rounded" style={{width:`${Math.max(0,Math.min(100,value))}%`}}/></div>) } export default Progress;
